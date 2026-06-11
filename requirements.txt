@@ -1,0 +1,36 @@
+# ── requirements.txt — Pipeline de Vídeo Multilíngue ─────────────────────────
+# Instalar no Colab:
+#   !pip install -r requirements.txt -q
+#   !apt-get -qq -y install ffmpeg espeak-ng > /dev/null 2>&1
+#
+# Versões mínimas testadas (Colab, Python 3.10+)
+
+# TTS e transcrição
+edge-tts>=6.1.9
+openai-whisper>=20231117
+
+# LLM (Groq via API OpenAI-compatível)
+openai>=1.14.0
+
+# Planilha Google Sheets (leitura de clipes)
+pandas>=2.0.0
+
+# Google Drive
+google-auth>=2.27.0
+google-auth-oauthlib>=1.2.0
+google-api-python-client>=2.118.0
+
+# Utilitários
+requests>=2.31.0
+gdown>=4.7.3
+
+# Áudio (necessário para Whisper)
+torch>=2.1.0
+soundfile>=0.12.1
+
+# Legendas YouTube (célula opcional B0)
+yt-dlp>=2024.1.0
+
+# ── Sistema (instalar via apt, não pip) ───────────────────────────────────────
+# ffmpeg
+# espeak-ng  (dependência do edge-tts para síntese local)
